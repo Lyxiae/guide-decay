@@ -274,7 +274,6 @@ a {
         span {
             color: $main-red;
             margin-right: 10px;
-            font-size:2.4rem;
         }
     }
     h4 {
@@ -366,10 +365,10 @@ a {
         margin: 0 auto;
         position: relative;
         min-height: 50px;
-        height:70px;
+        height: auto;
         .menu-side-l {
             width:auto;
-            height:70px;
+            height: auto;
             display: flex;
         flex-flow: row wrap;
         justify-content:space-evenly;
@@ -421,17 +420,7 @@ a {
         }
     }
     .content-menu {
-        height:100px;
-        .menu-side-l {
-            height:100px;
-
-        align-content:space-around;
-            li {
-                a {
-
-                }
-            }
-        }
+        display:none;
     }
 
 }
