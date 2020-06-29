@@ -1,0 +1,43 @@
+/*COLORS*/
+
+$main-red:#d21c4f;
+$main-blue:#00f1ff;
+$main-blue-trans:rgba(0,241,255,0.5);
+$main-grey:#222;
+$dark-grey:#090909;
+$black:#000000;
+
+$dark-grey-trans:rgba(10, 10, 10, 0.75);
+$dark-grey-trans2:rgba(10, 10, 10, 0.50);
+$dark-grey-trans3:rgba(10, 10, 10, 0.25);
+
+
+
+/*GRADIENTS*/
+$vertical-blue:linear-gradient(175deg, rgba(19,35,71,1) 0%, rgba(5,12,28,1) 100%);
+$diag-blue:linear-gradient(315deg, rgba(19,35,71,0.99) 0%, rgba(5,12,28,0.99) 100%);
+$reflect-blue:linear-gradient(90deg, rgba(8,15,30,1) 0%, rgba(18,34,71,1) 50%, rgba(8,15,30,1) 100%);
+$diag-blue-trans:linear-gradient(315deg, rgba(19,35,71,0.7) 0%, rgba(5,12,28,0.7) 100%);
+$vertical-red:linear-gradient(175deg, #d21c4f 0%, darken(#d21c4f, 10%) 100%);
+$right-red:linear-gradient(0deg, #d21c4f 0%, darken(#d21c4f, 10%) 100%);
+$vertical-yellow:linear-gradient(175deg, rgba(234,198,122,1) 0%, rgba(218,184,114,1) 100%);
+
+// IMAGES
+$backBrick:url('https://zupimages.net/up/19/46/airr.png');
+$backBrill:url("https://zupimages.net/up/19/46/fiix.png");
+
+/*TRANSITIONS*/
+$quickTrans:all 0.3s ease-in-out;
+$slowTrans:all 0.8s ease-in-out;
+
+/*FONTS*/
+$fontTitle:'neonregular', cursive ;
+$fontNarrow:'Oswald', serif;
+$fontSec:'Montserrat', sans-serif;
+$fontBase:'Open Sans', sans-serif;
+
+/*SHADOW*/
+$box-sdw:0px 0px 15px rgba(0,0,0,0.5);
+*, :before, :after {
+    box-sizing:border-box;
+}
