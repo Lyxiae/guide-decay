@@ -259,6 +259,8 @@ a {
 .content-in {
     padding:30px;
     background:#080808;
+    color:#ccc;
+    font: normal normal 400 0.9rem/160% $fontBase;
     h2 {
 
     }
@@ -284,10 +286,22 @@ a {
         letter-spacing:1px;
         padding:0 0 0 10px;
     }
-    p {
+    h5 {
+        font-family:$fontBase;
+        text-transform:uppercase;
+        font-weight:600;
+        font-size:14px;
+        color:$main-red;
+        margin-bottom:0px;
+        border:none;
+        background-color:#050505;
+        height:24px;
+        line-height:24px;
+        padding:0 5px;
+        display:inline-block;
+    }
+    p, ul {
         padding:0px 20px;
-        color:#ccc;
-        font: normal normal 400 0.9rem/160% $fontBase;
         text-align:justify;
     }
     strong, b {
@@ -299,6 +313,29 @@ a {
         font-weight:700;
         &:hover {
             color:$main-blue;
+        }
+    }
+    em {
+        font-style:italic;
+    }
+    li {
+        position:relative;
+        margin:5px 0px;
+        background-color:#070707;
+        border-radius:3px;
+        width:100%;
+        padding:5px 20px;
+        &::before {
+            content:'\eb21';
+            font-family:'Honeybee';
+            font-size:14px;
+            color:$main-blue;
+            position:absolute;
+            left:-10px;
+            top:5px;
+            font-weight:300;
+            opacity:0.7;
+            
         }
     }
 }
@@ -319,7 +356,53 @@ a {
     box-shadow:$box-sdw;
 }
 
-
+#accordion div {
+    background:#111;
+    padding:20px;
+    border-radius:8px;;
+}
+h4.collapsible-button {
+    background:$dark-reflect-blue;
+    display:block;
+    height:34px;
+    border-radius:8px;
+    padding:5px 15px;
+    transition:$quickTrans;
+    position:relative;
+    z-index:1;
+    font:normal normal 500 1rem/26px $fontSec;
+    color:desaturate($main-blue, 20%);
+    &:hover {
+        filter:brightness(1.2);
+        color:saturate($main-blue,10%);
+        cursor: pointer;
+        
+        &::after {
+            background:$dark-grey;
+        }
+    }
+    &::after {
+        content: "";
+        background: black;
+        position: absolute;
+        z-index: -1;
+        top: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        left: 1px;
+        border-radius: 8px;
+        transition:$quickTrans;
+    }
+    &::before {
+        content: "▼";
+        color:$main-red;
+        position:absolute;
+        z-index:5;
+        right:15px;
+        top:5px;
+        font-size:22px;
+    }
+}
 
 @media screen and (max-width:1320px) {
     .nav-left {
@@ -424,6 +507,8 @@ a {
     }
 
 }
+
+
 
 @media screen and (max-width :823px) {
     #tabs {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*COLORS*/
 /*GRADIENTS*/
 /*TRANSITIONS*/
@@ -269,6 +270,8 @@ a {
 .content-in {
   padding: 30px;
   background: #080808;
+  color: #ccc;
+  font: normal normal 400 0.9rem/160% "Open Sans", sans-serif;
 }
 .content-in h3 {
   font: normal normal 500 1.8rem/100% "Oswald", serif;
@@ -292,10 +295,22 @@ a {
   letter-spacing: 1px;
   padding: 0 0 0 10px;
 }
-.content-in p {
+.content-in h5 {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #d21c4f;
+  margin-bottom: 0px;
+  border: none;
+  background-color: #050505;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 5px;
+  display: inline-block;
+}
+.content-in p, .content-in ul {
   padding: 0px 20px;
-  color: #ccc;
-  font: normal normal 400 0.9rem/160% "Open Sans", sans-serif;
   text-align: justify;
 }
 .content-in strong, .content-in b {
@@ -308,6 +323,28 @@ a {
 }
 .content-in a:hover {
   color: #00f1ff;
+}
+.content-in em {
+  font-style: italic;
+}
+.content-in li {
+  position: relative;
+  margin: 5px 0px;
+  background-color: #070707;
+  border-radius: 3px;
+  width: 100%;
+  padding: 5px 20px;
+}
+.content-in li::before {
+  content: "";
+  font-family: "Honeybee";
+  font-size: 14px;
+  color: #00f1ff;
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  font-weight: 300;
+  opacity: 0.7;
 }
 
 .clear {
@@ -326,6 +363,54 @@ a {
   max-width: 30%;
   margin: 0 0 0 20px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+#accordion div {
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h4.collapsible-button {
+  background: linear-gradient(90deg, #00a5ad 0%, #27dae4 50%, #00a5ad 100%);
+  display: block;
+  height: 34px;
+  border-radius: 8px;
+  padding: 5px 15px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  font: normal normal 500 1rem/26px "Montserrat", sans-serif;
+  color: #1adae6;
+}
+h4.collapsible-button:hover {
+  filter: brightness(1.2);
+  color: #00f1ff;
+  cursor: pointer;
+}
+h4.collapsible-button:hover::after {
+  background: #090909;
+}
+h4.collapsible-button::after {
+  content: "";
+  background: black;
+  position: absolute;
+  z-index: -1;
+  top: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 1px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+h4.collapsible-button::before {
+  content: "▼";
+  color: #d21c4f;
+  position: absolute;
+  z-index: 5;
+  right: 15px;
+  top: 5px;
+  font-size: 22px;
 }
 
 @media screen and (max-width: 1320px) {
