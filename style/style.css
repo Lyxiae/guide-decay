@@ -309,11 +309,13 @@ a {
   padding: 0 5px;
   display: inline-block;
 }
-.content-in p, .content-in ul {
+.content-in p,
+.content-in ul {
   padding: 0px 20px;
   text-align: justify;
 }
-.content-in strong, .content-in b {
+.content-in strong,
+.content-in b {
   color: #eb698d;
   font-weight: 700;
 }
@@ -330,7 +332,7 @@ a {
 .content-in li {
   position: relative;
   margin: 5px 0px;
-  background-color: #070707;
+  background-color: #030303;
   border-radius: 3px;
   width: 100%;
   padding: 5px 20px;
@@ -365,7 +367,13 @@ a {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
-#accordion div {
+#accordion div, #accordion-lombardi div, #accordion-triade div, #accordion-yakuza div, #accordion-orga div, #accordion-cartel div, #accordion-alliance div, #accordion-underground div, #accordion-milice div, #accordion-eglise div {
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.inner-block {
   background: #111;
   padding: 20px;
   border-radius: 8px;
@@ -413,6 +421,330 @@ h4.collapsible-button::before {
   font-size: 22px;
 }
 
+/*FICHES FACTIONS*/
+.facFiche {
+  width: 100%;
+  height: 575px;
+  background-color: #111111;
+  margin-bottom: 20px;
+}
+
+.facTitle:before {
+  font-size: 76px;
+  line-height: 52px;
+  font-style: italic;
+  font-family: "Oswald", serif;
+  height: 60px;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  color: black;
+}
+
+.facTitle.gang:before {
+  content: "BANG BANG BANG BANG";
+}
+
+.facTitle.milice:before {
+  content: "BLAME IT ON MY ADD";
+}
+
+.facTitle.secte:before {
+  content: "WAISTED ALL MY SINS";
+}
+
+.facTitle.civils:before {
+  content: "SHOULD I RUN AWAY";
+}
+
+.facTitle {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  background-color: #111111;
+  overflow: hidden;
+  border-bottom: 2px solid #151515;
+}
+
+.facTitle div {
+  height: 60px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  color: transparent;
+  margin-left: 10px;
+  z-index: 3;
+  font-size: 30px;
+  line-height: 60px;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.facTitle.gang div {
+  background: linear-gradient(180deg, #f0963d 0%, #d5791c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.facTitle.milice div {
+  background: linear-gradient(180deg, #7c66e9 0%, #4930c4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.facTitle.secte div {
+  background: linear-gradient(180deg, #ff7aa0 0%, #e35d83 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.facTitle.civils div {
+  background: linear-gradient(180deg, #2ee0e9 0%, #0cb6bf 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.facImg {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  padding: 20px;
+  justify-content: flex-end;
+}
+
+.facImg.gang {
+  background: url("https://i.ibb.co/NYRSFjz/img-gangs.png");
+  border-bottom: 3px solid #FF9933;
+}
+
+.facImg.milice {
+  background: url("https://i.ibb.co/6r4zYWw/img-milice.png");
+  border-bottom: 3px solid #664CE8;
+}
+
+.facImg.secte {
+  background: url("https://i.ibb.co/Sy7y7fS/img-secte.png");
+  border-bottom: 3px solid #FA7198;
+}
+
+.facImg.civils {
+  background: url("https://i.ibb.co/wCF5hWg/img-civils.png");
+  border-bottom: 3px solid #22CDD6;
+}
+
+.facAdj {
+  background: rgba(0, 0, 0, 0.75) !important;
+  width: 170px;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  height: 160px;
+  margin: 0px;
+  overflow: auto;
+  border-radius: 5px;
+  background-clip: initial;
+}
+
+.facAdj li {
+  list-style: none;
+  background: #080808;
+  margin: 5px 0px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.facAdj.gang li {
+  color: #FF9933;
+}
+
+.facAdj.milice li {
+  color: #664CE8;
+}
+
+.facAdj.secte li {
+  color: #FA7198;
+}
+
+.facAdj.civils li {
+  color: #22CDD6;
+}
+
+.facTxt {
+  margin: 15px;
+  background: rgba(0, 0, 0, 0.75);
+  height: 150px;
+  padding: 20px;
+  overflow: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  color: #ccc;
+}
+
+.facQG span {
+  display: inline-block;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin: 0px 5px 5px 5px;
+  color: black;
+  font-weight: 900;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+}
+
+.facQG.gang span {
+  background: linear-gradient(180deg, #f0963d 0%, #d5791c 100%);
+}
+
+.facQG.milice span {
+  background: linear-gradient(180deg, #7c66e9 0%, #4930c4 100%);
+}
+
+.facQG.secte span {
+  background: linear-gradient(180deg, #ff7aa0 0%, #e35d83 100%);
+}
+
+.facQG.civils span {
+  background: linear-gradient(180deg, #2ee0e9 0%, #0cb6bf 100%);
+}
+
+.facQG {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  height: 34px;
+  padding: 7px 5px;
+  color: white !important;
+  background: #080808;
+}
+
+.facObj {
+  height: 50px;
+  background-color: #080808;
+  display: flex;
+  line-height: 50px;
+  justify-content: space-between;
+  padding-right: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.facObjTitle {
+  height: 50px;
+  width: 140px;
+  line-height: 50px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  padding: 0px 15px;
+  border-radius: 0px 25px 25px 0px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+}
+
+.facObjTitle.gang {
+  background: linear-gradient(180deg, #f0963d 0%, #d5791c 100%);
+  color: black !important;
+}
+
+.facObjTitle.milice {
+  background: linear-gradient(180deg, #7c66e9 0%, #4930c4 100%);
+  color: black !important;
+}
+
+.facObjTitle.secte {
+  background: linear-gradient(180deg, #ff7aa0 0%, #e35d83 100%);
+  color: black !important;
+}
+
+.facObjTitle.civils {
+  background: linear-gradient(180deg, #2ee0e9 0%, #0cb6bf 100%);
+  color: black !important;
+}
+
+.facStatus {
+  width: 100%;
+  height: 45px;
+  display: flex;
+}
+
+.facPol {
+  width: 50%;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+.facPol span {
+  position: relative;
+  z-index: 3;
+}
+
+.facPol {
+  box-sizing: content-box;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  line-height: 45px;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  transition: 0.35s ease-in-out;
+  filter: brightness(0.8);
+}
+
+.facPol:hover {
+  filter: brightness(1);
+}
+
+.facPol.gang {
+  background: linear-gradient(180deg, #f0963d 0%, #d5791c 100%);
+  border-top: 5px solid #FF9933;
+  color: #fff !important;
+}
+
+.facPol.milice {
+  background: linear-gradient(180deg, #7c66e9 0%, #4930c4 100%);
+  border-top: 5px solid #664CE8;
+  color: #fff !important;
+}
+
+.facPol.secte {
+  background: linear-gradient(180deg, #ff7aa0 0%, #e35d83 100%);
+  border-top: 5px solid #FA7198;
+  color: #fff !important;
+}
+
+.facPol:before {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Oswald", serif;
+  font-size: 56px;
+  text-transform: uppercase;
+  line-height: 42px;
+  font-style: italic;
+}
+
+.facPol.gang:before {
+  content: "gangs";
+}
+
+.facPol.milice:before {
+  content: "milice";
+}
+
+.facPol.secte:before {
+  content: "secte";
+}
+
 @media screen and (max-width: 1320px) {
   .nav-left {
     width: 260px;
@@ -429,7 +761,8 @@ h4.collapsible-button::before {
     margin: 20px 20px;
   }
 
-  .back-article, .content-main {
+  .back-article,
+.content-main {
     width: calc(100% - 220px);
   }
 
