@@ -340,14 +340,14 @@ a {
 .img-article {
     float: left;
     max-width: 30%;
-    margin: 0 20px 0 0;
+    margin: 10px 20px 10px 0;
     box-shadow: $box-sdw;
 }
 
 .img-article2 {
     float: right;
     max-width: 30%;
-    margin: 0 0 0 20px;
+    margin: 10px 0 10px 20px;
     box-shadow: $box-sdw;
 }
 
@@ -708,7 +708,14 @@ h4.collapsible-button {
 .facPol.secte:before {
     content: "secte";
 }
-
+@media screen and (max-width: 1620px) {
+    .img-article {
+        max-width: 40%;
+    }
+    .img-article2 {
+        max-width: 40%;
+    }
+}
 @media screen and (max-width: 1320px) {
     .nav-left {
         width: 260px;
@@ -726,12 +733,7 @@ h4.collapsible-button {
     .content-main {
         width: calc(100% - 220px);
     }
-    .img-article {
-        max-width: 40%;
-    }
-    .img-article2 {
-        max-width: 40%;
-    }
+
     .headimg-ency {
         h2 {
             font-size: 3.6rem;
