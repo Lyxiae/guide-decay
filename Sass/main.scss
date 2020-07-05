@@ -87,7 +87,7 @@ a {
 
 .nav-left__heading {
     width: 100%;
-    height: 200px;
+    height: 130px;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
@@ -107,7 +107,6 @@ a {
 }
 
 .nav-left-main {
-    height: calc(100vh - 250px);
     padding: 20px 30px;
     background-color: $dark-grey-trans2;
 }
@@ -133,7 +132,7 @@ a {
             font: normal normal 500 0.8rem/100% $fontSec;
             text-transform: uppercase;
             display: block;
-            padding: 5px 6px;
+            line-height: 22px;
             text-transform: uppercase;
             background-color: darken($dark-grey-trans, 10%);
             border-radius: 5px;
@@ -158,9 +157,18 @@ a {
             a {
                 color: darken($main-blue, 10%);
                 transition: $quickTrans;
+                width: 100%;
+                display: inline-block;
+                height: 100%;
+                padding: 0 5px;
                 &:hover {
                     color: $main-blue;
                 }
+                    color: #00c1cc;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    display: inline-block;
+    height: 100%;
             }
         }
     }
